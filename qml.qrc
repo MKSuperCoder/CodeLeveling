@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>../CodeLeveling/CodeLevelingContent/Screen01.ui.qml</file>
+        <file>../CodeLeveling/CodeLevelingContent/Screen1.ui.qml</file>
+        <file>../CodeLeveling/CodeLevelingContent/StatusMenu.ui.ui.qml</file>
+        <file>StartMenu.qml</file>
+        <file>../../Downloads/keyboardsoundeffects.mp3</file>
+        <file>../CodeLeveling/CodeLevelingContent/Training.qml</file>
+        <file>LoginPage.qml</file>
+        <file>Quest.qml</file>
+        <file>images/timer.png</file>
+        <file>compiler.qml</file>
+        <file>SignupPage.qml</file>
+        <file>database/login.db</file>
+        <file>database/users.db</file>
+        <file>statuss.qml</file>
+        <file>Levels.qml</file>
+    </qresource>
+</RCC>
