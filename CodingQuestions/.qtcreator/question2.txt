@@ -1,0 +1,7 @@
+2. Create a program that:
+• Stores an array of student grades
+• Calculates the total grade sum
+• Determines how many students passed (grades 60 and above)
+• Identifies the highest and lowest grades
+This should be your output
+

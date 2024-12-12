@@ -1,0 +1,20 @@
+1. How do you access the elements in an array using a for loop?
+
+a) By using the array index inside square brackets
+b) By using parentheses around the element
+c) By calling each element directly
+d) By looping backwards
+
+2) Which is the correct way to define an array?
+
+a) string cars[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+b) string cars[5] = ["Volvo", "BMW", "Ford", "Mazda", "Tesla"];
+c) string cars[5] = ("Volvo", "BMW", "Ford", "Mazda", "Tesla");
+d) string cars = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+
+3) Which is the correct way to loop through an array?
+
+a) for (int i = 0; i < 5; i++)
+b) for (int i = 0, i < 5, i++)
+c) for {int i = 0; i < 5; i++}
+d) for [int i = 0; i < 5; i++]

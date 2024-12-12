@@ -78,10 +78,18 @@ ApplicationWindow {
                 width: 309
                 height: 64
                 color: "#faf0f0"
-                text: qsTr("Solve 5 coding challenges")
+                text: qsTr("Solve a coding challenges")
                 font.pixelSize: 26
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+                MouseArea {
+                    id: mouseArea
+                    x: 8
+                    y: 8
+                    width: 301
+                    height: 48
+                    onClicked: logicHandler.handleNavigation("CodingQuestion.qml", mainWindow)
+                }
             }
 
             CheckBox {
@@ -104,6 +112,18 @@ ApplicationWindow {
                 font.pixelSize: 26
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+
+                MouseArea {
+                    id: mouseArea2
+                    x: 8
+                    y: 8
+                    width: 301
+                    height: 48
+                    onClicked: {
+                        Qt.openUrlExternally("https://www.youtube.com/watch?v=QFrJQq6Iox8&t=1s")
+                        logicHandler.handleNavigation("quiz.qml", mainWindow)
+                    }
+                }
             }
 
             CheckBox {

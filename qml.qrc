@@ -10,11 +10,35 @@
         <file>LoginPage.qml</file>
         <file>Quest.qml</file>
         <file>images/timer.png</file>
-        <file>compiler.qml</file>
         <file>SignupPage.qml</file>
-        <file>database/login.db</file>
-        <file>database/users.db</file>
         <file>statuss.qml</file>
         <file>Levels.qml</file>
+        <file>Quests/.qtcreator/project.json</file>
+        <file>Quests/DailyQuests/Quest1.txt</file>
+        <file>Quests/DailyQuests/links.txt</file>
+        <file>Quizzes/.qtcreator/project.json</file>
+        <file>Quizzes/.qtcreator/arrayQuiz.txt</file>
+        <file>CodingQuestions/.qtcreator/project.json</file>
+        <file>CodingQuestions/.qtcreator/questions1.txt</file>
+        <file>CodingQuestion.qml</file>
+        <file>CodingQuestions/.qtcreator/question2.txt</file>
+        <file>CodingQuestions/.qtcreator/exampleoutput1.txt</file>
+        <file>CodingQuestion2.qml</file>
+        <file>CodingQuestions/.qtcreator/exampleoutput2.txt</file>
+        <file>CodingQuestions/.qtcreator/exampleoutput3.txt</file>
+        <file>CodingQuestions/.qtcreator/exampleoutput4.txt</file>
+        <file>CodingQuestions/.qtcreator/exampleoutput5.txt</file>
+        <file>CodingQuestions/.qtcreator/question3.txt</file>
+        <file>CodingQuestions/.qtcreator/question4.txt</file>
+        <file>CodingQuestions/.qtcreator/question5.txt</file>
+        <file>CodingQuestion3.qml</file>
+        <file>CodingQuestion4.qml</file>
+        <file>CodingQuestion5.qml</file>
+        <file>Rewards.qml</file>
+        <file>database/userinfo.db</file>
+        <file>userinfo.sql</file>
+        <file>users.db</file>
+        <file>users.sqbpro</file>
+        <file>quiz.qml</file>
     </qresource>
 </RCC>

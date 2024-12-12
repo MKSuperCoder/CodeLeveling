@@ -51,3 +51,5 @@ void LogicHandler::handleNoClicked()
     QCoreApplication::quit(); // Exit the application
     // This ends the event loop and releases resources
 }
+
+

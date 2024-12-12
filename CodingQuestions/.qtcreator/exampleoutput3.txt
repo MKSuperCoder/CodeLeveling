@@ -1,0 +1,6 @@
+Input: [25.50, 34.75, 15.20, 45.60, 12.90]
+Output:
+Total Before Discount: 133.95
+Discount Applied: 10%
+Final Total: 120.55
+Number of Items: 5

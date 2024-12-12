@@ -1,5 +1,7 @@
 QT += quick
 QT += sql
+QT += core
+
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -7,13 +9,16 @@ QT += sql
 
 SOURCES += \
         databasemanager.cpp \
+        filehandler.cpp \
         generalstats.cpp \
         goalsmodel.cpp \
         logichandler.cpp \
         main.cpp \
         playerinformation.cpp \
         points.cpp \
+        quest.cpp \
         startmenu.cpp \
+        stats.cpp \
         status.cpp \
         technicalstats.cpp \
         title.cpp
@@ -33,12 +38,15 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     databasemanager.h \
+    filehandler.h \
     generalstats.h \
     goalsmodel.h \
     logichandler.h \
     playerinformation.h \
     points.h \
+    quest.h \
     startmenu.h \
+    stats.h \
     status.h \
     technicalstats.h \
     title.h

@@ -1,0 +1,5 @@
+4. Write a program that:
+• Creates an array of characters
+• Counts how many times each character appears
+• Identifies the most frequent character
+This should be your output

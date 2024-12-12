@@ -1,0 +1,6 @@
+5. Create a program that:
+• Takes an array of numbers
+• Doubles all even numbers
+• Triples all odd numbers
+• Prints the transformed array
+This should be your output

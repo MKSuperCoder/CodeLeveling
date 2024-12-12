@@ -1,0 +1,11 @@
+3. Develop a program that:
+• Creates an array of product prices
+• Calculates the total cost
+• Applies a discount for purchases over $100
+• Determines the number of items in the cart
+This should be your output
+
+
+
+
+

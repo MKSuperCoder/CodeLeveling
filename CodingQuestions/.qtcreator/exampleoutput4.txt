@@ -1,0 +1,8 @@
+Input: ['a', 'b', 'a', 'c', 'b', 'a', 'd', 'b']
+Output:
+Character Frequencies:
+a: 3 times
+b: 3 times
+c: 1 time
+d: 1 time
+Most Frequent Character: a (or b)

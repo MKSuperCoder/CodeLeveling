@@ -5,6 +5,11 @@
 #include "goalsmodel.h"
 #include "databasemanager.h"
 #include "status.h"
+#include "quest.h"
+#include <fstream>
+#include <iostream>
+#include "filehandler.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -71,6 +76,27 @@ int main(int argc, char *argv[])
     //This instructs the QQmlApplication to load and render the QML file specified
     //by url
     engine.load(url);
+    /*Quest quest("Main Quest", QDateTime::currentDateTime().addDays(7), "Hard");
+
+    qDebug() << quest.displayDetails();
+
+    quest.markAsComplete();
+    qDebug() << "Completion Status: " << quest.getCompletionStatus(); */
+    std::ifstream fileIn;
+
+    fileIn.open("/Quests/DailyQuests/Quest1.txt");
+    std::string firstTask, secondTask, thirdTask;
+
+    fileIn >> firstTask >> secondTask >> thirdTask;
+
+    fileIn.close();
+
+
+    qmlRegisterType<FileHandler>("filehandler", 1, 0, "FileHandler");
+
+    if (engine.rootObjects().isEmpty())
+        return -1;
+
 
     //This starts the main event loop for the application, waiting for and dispatching
     // events such as user inputs and redraw requests

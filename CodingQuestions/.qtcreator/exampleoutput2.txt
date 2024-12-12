@@ -1,0 +1,6 @@
+Input: [45, 55, 67, 88, 92, 33, 59, 76]
+Output:
+Total Grade Sum: 515
+Passing Students: 5
+Highest Grade: 92
+Lowest Grade: 33

@@ -82,7 +82,7 @@ ApplicationWindow {
                 // Player Details
                 Text { text: "Name: " + status.username; color: "white"; font.pixelSize: 16 }
                 Text { text: "Title: " + status.title; color: "white"; font.pixelSize: 16 }
-                Text { text: "Level: " + 1; color: "white"; font.pixelSize: 16 }
+                Text { text: "Level: " + 2; color: "white"; font.pixelSize: 16 }
                 Text { text: "Fatigue: " + 0; color: "white"; font.pixelSize: 16 }
                 Text { text: "HP: " + 100; color: "white"; font.pixelSize: 16 }
             }
@@ -105,7 +105,7 @@ ApplicationWindow {
             radius: 10
 
             Text {
-                text: "POINTS: " + 2
+                text: "POINTS: " + 20
                 font.pixelSize: 20
                 font.bold: true
                 color: "#00bfff"
@@ -175,7 +175,7 @@ ApplicationWindow {
                 }
 
                 // Technical Stats Details
-                Text { x: 33; y: 36; text: "Array-Mastery: " + 1; color: "white"; font.pixelSize: 16 }
+                Text { x: 33; y: 36; text: "Array-Mastery: " + 5; color: "white"; font.pixelSize: 16 }
                 Text { x: 25; y: 64; text: "Vector-Mastery: "; color: "white"; font.pixelSize: 16 }
                 Text { x: 20; y: 88; text: "Classes-Mastery: "; color: "white"; font.pixelSize: 16 }
                 Text { x: 14; y: 116; text: "Pointers-Mastery: "; color: "white"; font.pixelSize: 16 }

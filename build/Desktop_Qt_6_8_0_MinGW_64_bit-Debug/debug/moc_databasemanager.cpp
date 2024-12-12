@@ -36,12 +36,12 @@ namespace {
 struct qt_meta_stringdata_CLASSDatabaseManagerENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSDatabaseManagerENDCLASS = QtMocHelpers::stringData(
     "DatabaseManager",
-    "validateUser",
+    "storeUser",
     "",
     "username",
     "password",
-    "storeUser",
     "email",
+    "validateUser",
     "getUsername"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -63,13 +63,13 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSDatabaseManagerENDCLASS[] = {
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,   32,    2, 0x02,    1 /* Public */,
-       5,    3,   37,    2, 0x02,    4 /* Public */,
+       1,    3,   32,    2, 0x02,    1 /* Public */,
+       6,    2,   39,    2, 0x02,    5 /* Public */,
        7,    0,   44,    2, 0x02,    8 /* Public */,
 
  // methods: parameters
+    QMetaType::Bool, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,
     QMetaType::Bool, QMetaType::QString, QMetaType::QString,    3,    4,
-    QMetaType::Bool, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    6,
     QMetaType::QString,
 
        0        // eod
@@ -84,13 +84,13 @@ Q_CONSTINIT const QMetaObject DatabaseManager::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSDatabaseManagerENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<DatabaseManager, std::true_type>,
-        // method 'validateUser'
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'storeUser'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'validateUser'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'getUsername'
@@ -105,9 +105,9 @@ void DatabaseManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<DatabaseManager *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: { bool _r = _t->validateUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 0: { bool _r = _t->storeUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 1: { bool _r = _t->storeUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])));
+        case 1: { bool _r = _t->validateUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 2: { QString _r = _t->getUsername();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;

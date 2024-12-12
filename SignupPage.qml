@@ -143,14 +143,13 @@ ApplicationWindow {
                         radius: 10
                     }
                     onClicked: {
-                                        if (databaseManager.storeUser(usernameField.text, passwordField.text, emailField.text)) {
-                                            logicHandler.handleNavigation("StartMenu.qml", mainWindow)
-                                            console.log("Sign-Up successful!");
-                                            // Navigate to the login page or main menu
-                                        } else {
-                                            console.log("Sign-Up failed. Username or email might already exist.");
-                                        }
-                        }
+                           if (databaseManager.storeUser(usernameField.text, passwordField.text, emailField.text)) {
+                               console.log("Sign-Up successful!");
+                               logicHandler.handleNavigation("StartMenu.qml", mainWindow);
+                           } else {
+                               console.log("Sign-Up failed. Username or email might already exist.");
+                           }
+                       }
                     }
 
 
