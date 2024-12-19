@@ -14,7 +14,6 @@ SOURCES += \
         goalsmodel.cpp \
         logichandler.cpp \
         main.cpp \
-        playerinformation.cpp \
         points.cpp \
         quest.cpp \
         startmenu.cpp \
@@ -42,7 +41,6 @@ HEADERS += \
     generalstats.h \
     goalsmodel.h \
     logichandler.h \
-    playerinformation.h \
     points.h \
     quest.h \
     startmenu.h \

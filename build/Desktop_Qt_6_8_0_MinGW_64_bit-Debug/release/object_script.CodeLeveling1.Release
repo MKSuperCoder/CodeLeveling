@@ -4,7 +4,6 @@ release/generalstats.o
 release/goalsmodel.o
 release/logichandler.o
 release/main.o
-release/playerinformation.o
 release/points.o
 release/quest.o
 release/startmenu.o
@@ -18,7 +17,6 @@ release/moc_filehandler.o
 release/moc_generalstats.o
 release/moc_goalsmodel.o
 release/moc_logichandler.o
-release/moc_playerinformation.o
 release/moc_points.o
 release/moc_startmenu.o
 release/moc_stats.o

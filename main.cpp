@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     //It's entirely customizable. It serves as the namespace for your custom type when
     // it is registered with the QML engine
     //1, 0 is the version of the type
-    // "LogicHandler" is the name used to reerence this class in QML
+    // "LogicHandler" is the name used to reference this class in QML
 
     qmlRegisterType<GoalsModel>("GoalsModel", 1, 0, "GoalsModel");
 

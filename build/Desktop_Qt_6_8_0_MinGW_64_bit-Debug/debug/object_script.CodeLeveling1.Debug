@@ -4,7 +4,6 @@ debug/generalstats.o
 debug/goalsmodel.o
 debug/logichandler.o
 debug/main.o
-debug/playerinformation.o
 debug/points.o
 debug/quest.o
 debug/startmenu.o
@@ -18,7 +17,6 @@ debug/moc_filehandler.o
 debug/moc_generalstats.o
 debug/moc_goalsmodel.o
 debug/moc_logichandler.o
-debug/moc_playerinformation.o
 debug/moc_points.o
 debug/moc_startmenu.o
 debug/moc_stats.o
