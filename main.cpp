@@ -2,10 +2,9 @@
 #include <QQmlApplicationEngine> //This manages the loading and execution of QML files
 #include "LogicHandler.h" //This is a custom C++ class that will be exposed to QML
 #include <QQmlContext> //This is used for context properties that allow passign data between C++ and QML
-#include "goalsmodel.h"
 #include "databasemanager.h"
-#include "status.h"
 #include "quest.h"
+#include "status.h"
 #include <fstream>
 #include <iostream>
 #include "filehandler.h"
@@ -29,12 +28,6 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("Status", &status);
     qmlRegisterType<Status>("Status", 1, 0, "Status");
 
-    TechnicalStats technicalStats;
-    engine.rootContext()->setContextProperty("TechnicalStats", &technicalStats);
-
-    GeneralStats generalStats;
-    engine.rootContext()->setContextProperty("GeneralStats", &generalStats);
-
     //qputenv sets up the environment variable for the application process
     // "QT_QUICK_CONTROLS_STYLE" specifices the style for Qt Quick Controls.
     //Here the "Material" design style is applied
@@ -49,7 +42,7 @@ int main(int argc, char *argv[])
     //1, 0 is the version of the type
     // "LogicHandler" is the name used to reference this class in QML
 
-    qmlRegisterType<GoalsModel>("GoalsModel", 1, 0, "GoalsModel");
+    qmlRegisterType<Quest>("Quest", 1, 0, "Quest");
 
     // This specifies the path to the main QML file (main.qml) in the QT resource system (qrc)
     const QUrl url(QStringLiteral("qrc:/main.qml"));
@@ -76,21 +69,6 @@ int main(int argc, char *argv[])
     //This instructs the QQmlApplication to load and render the QML file specified
     //by url
     engine.load(url);
-    /*Quest quest("Main Quest", QDateTime::currentDateTime().addDays(7), "Hard");
-
-    qDebug() << quest.displayDetails();
-
-    quest.markAsComplete();
-    qDebug() << "Completion Status: " << quest.getCompletionStatus(); */
-    std::ifstream fileIn;
-
-    fileIn.open("/Quests/DailyQuests/Quest1.txt");
-    std::string firstTask, secondTask, thirdTask;
-
-    fileIn >> firstTask >> secondTask >> thirdTask;
-
-    fileIn.close();
-
 
     qmlRegisterType<FileHandler>("filehandler", 1, 0, "FileHandler");
 

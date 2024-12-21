@@ -12,14 +12,27 @@ ApplicationWindow {
     LogicHandler {
         id: logicHandler // This allows referencing this instance in QML
     }
+    ScoreManager {
+        id: scoreManager
+    }
+
+    ErrorPopup {
+           id: errorPopup
+       }
     Rectangle {
         width: 500
         height: 700
         anchors.centerIn: parent
         radius: 20
         gradient: Gradient {
-            GradientStop { position: 0.0; color: "#0d1e35" }
-            GradientStop { position: 1.0; color: "#2a4b7e" }
+            GradientStop {
+                position: 0.0
+                color: "#0000FF" // Blue
+            }
+            GradientStop {
+                position: 1.0
+                color: "#FFFFFF" // White
+            }
         }
         border.color: "#5dd0f0"
         border.width: 3
@@ -62,8 +75,8 @@ ApplicationWindow {
             width: 292
             height: 54
             color: "#f5f0f0"
-            text: qsTr("What is an array?\n")
-            font.pixelSize: 20
+            text: qsTr("Which of the following best describes the role of the condition in a for loop?\n")
+            font.pixelSize: 15
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
         }
@@ -75,8 +88,8 @@ ApplicationWindow {
             width: 434
             height: 65
             color: "#f5f0f0"
-            text: qsTr("a) data structures that can hold multiple \nvalues of the same type\n\n")
-            font.pixelSize: 20
+            text: qsTr("a)  It specifies the value to start the loop.\n\n")
+            font.pixelSize: 15
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
         }
@@ -88,8 +101,8 @@ ApplicationWindow {
             width: 392
             height: 63
             color: "#f5f0f0"
-            text: qsTr("b) data structures that can hold multiple \nvalues of different types\n\n")
-            font.pixelSize: 20
+            text: qsTr("b) It determines whether the loop should execute on the next iteration.\n\n")
+            font.pixelSize: 15
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
         }
@@ -101,8 +114,8 @@ ApplicationWindow {
             width: 392
             height: 63
             color: "#f5f0f0"
-            text: qsTr("c) A programmer’s best friend... until it isn't.\n")
-            font.pixelSize: 20
+            text: qsTr("c) It updates the loop variable after each iteration.\n")
+            font.pixelSize: 15
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
         }
@@ -114,8 +127,8 @@ ApplicationWindow {
             width: 392
             height: 63
             color: "#f5f0f0"
-            text: qsTr("d) Just a bunch of brackets having a party.\n\n")
-            font.pixelSize: 20
+            text: qsTr("d) It specifies the increment or decrement of the loop variable.\n\n")
+            font.pixelSize: 15
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
         }
@@ -156,10 +169,12 @@ ApplicationWindow {
             anchors.horizontalCenterOffset: -5
             anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
-                if (checkBox.checked && !checkBox1.checked && !checkBox2.checked && !checkBox3.checked) {
+                if (checkBox1.checked && !checkBox.checked && !checkBox2.checked && !checkBox3.checked) {
                     console.log("Correct answer!");
-                    logicHandler.handleNavigation("Rewards.qml", mainWindow);
+                    scoreManager.incrementScore();
+                    logicHandler.handleNavigation("sidequest6.qml", mainWindow);
                 } else {
+                    errorPopup.open()
                     console.log("Wrong answer. Try again.");
                 }
             }

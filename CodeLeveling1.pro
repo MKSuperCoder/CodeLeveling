@@ -10,17 +10,10 @@ QT += core
 SOURCES += \
         databasemanager.cpp \
         filehandler.cpp \
-        generalstats.cpp \
-        goalsmodel.cpp \
         logichandler.cpp \
         main.cpp \
-        points.cpp \
         quest.cpp \
-        startmenu.cpp \
-        stats.cpp \
-        status.cpp \
-        technicalstats.cpp \
-        title.cpp
+        status.cpp
 
 RESOURCES += qml.qrc
 
@@ -38,13 +31,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     databasemanager.h \
     filehandler.h \
-    generalstats.h \
-    goalsmodel.h \
     logichandler.h \
-    points.h \
     quest.h \
-    startmenu.h \
-    stats.h \
-    status.h \
-    technicalstats.h \
-    title.h
+    status.h
+
+DISTFILES += \
+    ../ClassesQuiz3.qml

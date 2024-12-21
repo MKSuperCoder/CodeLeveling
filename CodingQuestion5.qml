@@ -18,6 +18,9 @@ ApplicationWindow {
         questionFilePath: ":/CodingQuestions/.qtcreator/question5.txt"
         exampleOutputFilePath: ":/CodingQuestions/.qtcreator/exampleoutput5.txt"
     }
+    ErrorPopup {
+           id: errorPopup
+       }
 
     Rectangle {
         width: 500
@@ -127,7 +130,7 @@ ApplicationWindow {
             text: "Run"
             anchors.horizontalCenterOffset: 103
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: logicHandler.handleNavigation("Rewards.qml", mainWindow)
+            onClicked: logicHandler.handleNavigation("Quest.qml", mainWindow)
         }
 
         Button {

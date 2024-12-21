@@ -43,6 +43,23 @@ void LogicHandler::handleNavigation(const QString &qmlFile, QObject *currentWind
         window->close();
     }
 }
+void LogicHandler::handleNavigation(const QString &qmlFile) {
+    qDebug() << "Navigating to:" << qmlFile;
+
+    if (!m_newEngine) {
+
+        m_newEngine = new QQmlApplicationEngine();
+    }
+
+
+    m_newEngine->load(QUrl(QStringLiteral("qrc:/") + qmlFile));
+
+
+    if (m_newEngine->rootObjects().isEmpty()) {
+        qWarning() << "Failed to load" << qmlFile;
+        return;
+    }
+}
 
 // This function is triggered when the user clicks the "No" button.
 void LogicHandler::handleNoClicked()

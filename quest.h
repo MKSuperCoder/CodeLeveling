@@ -8,26 +8,43 @@
 #include <QObject>
 #include <QTimer>
 #include <QDateTime>
+#include <iostream>
 
-// Base class
-class Quest {
-protected:
-    QString task;
-    QString link;
-    bool isCompleted;
+class BaseQuest {
+public:
+    virtual ~BaseQuest() {}
+
+
+    virtual void startQuest() const = 0;
+    virtual void completeQuest() const = 0;
+};
+
+
+class Quest : public BaseQuest {
+private:
+    QString title;
+    QString description;
+    int reward;
 
 public:
+
     Quest();
     Quest(const QString &task, const QString &link);
 
-    void setTask(const QString &task);
-    void setLink(const QString &link);
-    QString getTask() const;
-    QString getLink() const;
+
+    void startQuest() const override;
+    void completeQuest() const override;
+
 
     static void loadFromFile(const QString &filePath);
-};
 
+
+    int getReward() const;
+    void setReward(int r);
+
+
+    QString toString() const;
+};
 
 
 #endif // QUEST_H

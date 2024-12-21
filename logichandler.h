@@ -11,6 +11,7 @@ class LogicHandler : public QObject
 public:
     explicit LogicHandler(QObject *parent = nullptr);
 
+    Q_INVOKABLE void handleNavigation(const QString &qmlFile);
     Q_INVOKABLE void handleNavigation(const QString &qmlFile, QObject *currentWindow);
     Q_INVOKABLE void handleNoClicked();
 

@@ -3,11 +3,6 @@
 
 #include <QObject>
 #include <QString>
-#include "title.h"
-#include "points.h"
-#include "generalstats.h"
-#include "technicalstats.h"
-
 class Status : public QObject {
     Q_OBJECT
     Q_PROPERTY(QString username READ username WRITE setUsername NOTIFY usernameChanged)
@@ -74,8 +69,8 @@ signals:
 
 
 private:
-    QString m_username;            // Player's username
-    QString m_title;                // Player's title
+    QString m_username;
+    QString m_title;
     int m_points;
 
     // General Stats

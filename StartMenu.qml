@@ -56,7 +56,7 @@ ApplicationWindow {
                     height: 50
                     onClicked: {
                         console.log("Navigating to Quest.qml...");
-                        logicHandler.handleNavigation("Quest.qml", mainWindow)
+                        logicHandler.handleNavigation("TrainingGround.qml", mainWindow)
                     }
                 }
 

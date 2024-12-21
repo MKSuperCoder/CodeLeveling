@@ -1,28 +1,20 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import LogicHandler 1.0
-import filehandler 1.0
 
 ApplicationWindow {
     id: mainWindow
     visible: true
     width: 500
     height: 700
-    title: "Coding Questions"
+    title: "quiz"
 
     LogicHandler {
-        id: logicHandler
+        id: logicHandler // This allows referencing this instance in QML
     }
-    FileHandler {
-        id: filehandler
-        questionFilePath: ":/CodingQuestions/.qtcreator/question3.txt"
-        exampleOutputFilePath: ":/CodingQuestions/.qtcreator/exampleoutput4.txt"
-    }
-
     Rectangle {
         width: 500
         height: 700
-        color: "#000000"
         anchors.centerIn: parent
         radius: 20
         gradient: Gradient {
@@ -31,122 +23,146 @@ ApplicationWindow {
         }
         border.color: "#5dd0f0"
         border.width: 3
+        anchors.verticalCenterOffset: 0
+        anchors.horizontalCenterOffset: 0
 
         Text {
-            x: 161
-            y: 28
-            text: "Coding Challenge"
+            x: 215
+            y: 30
+            text: "Quiz"
             font.bold: true
             font.pixelSize: 28
             color: "white"
         }
 
-        // Daily Quest Section
         Text {
-            x: 105
-            y: 83
-            text: "TRAIN TO BECOME\nA FORMIDABLE PROGRAMMER"
-            font.pixelSize: 18
+            x: 58
+            y: 567
+            text: "CAUTION! - IF YOU GET THIS WRONG, PENALTIES\nWILL BE GIVEN ACCORDINGLY."
+            font.pixelSize: 16
             font.bold: true
-            color: "white"
+            color: "red"
             horizontalAlignment: Text.AlignHCenter
         }
 
-        Rectangle {
-            id: questionSection
-            x: 72
-            y: 150
-            width: 341
-            height: 212
-            color: "#0d1e35"
-            TextEdit {
-                id: textEdit
-                anchors.fill: parent
-                anchors.leftMargin: 8
-                anchors.rightMargin: 8
-                anchors.topMargin: 8
-                anchors.bottomMargin: 102
-                color: "#eedfdf"
-                font.pixelSize: 13
-                wrapMode: TextEdit.WordWrap
-                readOnly: true
-                text: filehandler.readQuestion()
-            }
-
-            Rectangle {
-                id: outputSection
-                x: 8
-                y: 116
-                width: 325
-                height: 88
-                color: "#19375f"
-                TextEdit {
-                    id: textEdit1
-                    color: "#f7f1f1"
-                    anchors.fill: parent
-                    anchors.rightMargin: 0
-                    anchors.leftMargin: 0
-                    anchors.topMargin: 0
-                    anchors.bottomMargin: 0
-                    font.pixelSize: 13
-                    wrapMode: TextEdit.WordWrap
-                    readOnly: true
-                    text: filehandler.readExampleOutput()
-                }
-            }
-        }
-
-        Rectangle {
-            id: codeEditor
-            x: 72
-            y: 392
-            width: 341
-            height: 200
-            color: "#19375f"
-            border.color: "#0d1e35"
-            border.width: 8
-            TextEdit {
-                width: 320
-                height: 120
-                id: codeTextEdit
-                anchors.fill: parent
-                anchors.leftMargin: 8
-                anchors.rightMargin: 8
-                anchors.topMargin: 8
-                anchors.bottomMargin: 8
-                color: "#eedfdf"
-                font.pixelSize: 11
-                text: "Write your code here..."
-            }
-        }
-
         Button {
-            y: 598
-            width: 91
-            height: 40
-            text: "Run"
-            anchors.horizontalCenterOffset: 103
-            anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: logicHandler.handleNavigation("CodingQuestion4.qml", mainWindow)
-        }
-
-        Button {
-            y: 598
-            width: 91
-            height: 40
-            text: "Clear"
-            anchors.horizontalCenterOffset: -121
-            anchors.horizontalCenter: parent.horizontalCenter
-            // not working for now
-        }
-
-        Button {
-            y: 652
+            y: 631
+            text: "Close"
+            anchors.horizontalCenterOffset: -5
             width: 100
             height: 40
-            text: "Back"
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: logicHandler.handleNavigation("Quest.qml", mainWindow)
+            onClicked: logicHandler.handleNavigation("StartMenu.qml", mainWindow)
+        }
+
+        TextEdit {
+            id: textEdit
+            x: 100
+            y: 108
+            width: 292
+            height: 54
+            color: "#f5f0f0"
+            text: qsTr("What is a function prototype in C++?\n")
+            font.pixelSize: 20
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+        }
+
+        TextEdit {
+            id: textEdit1
+            x: 94
+            y: 154
+            width: 434
+            height: 65
+            color: "#f5f0f0"
+            text: qsTr("a) int 4thValue;\n\n")
+            font.pixelSize: 20
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+        }
+
+        TextEdit {
+            id: textEdit2
+            x: 94
+            y: 219
+            width: 392
+            height: 63
+            color: "#f5f0f0"
+            text: qsTr("b) float my number;\n\n")
+            font.pixelSize: 20
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+        }
+
+        TextEdit {
+            id: textEdit3
+            x: 94
+            y: 288
+            width: 392
+            height: 63
+            color: "#f5f0f0"
+            text: qsTr("c) double _value2;\n")
+            font.pixelSize: 20
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+        }
+
+        TextEdit {
+            id: textEdit4
+            x: 94
+            y: 335
+            width: 392
+            height: 63
+            color: "#f5f0f0"
+            text: qsTr("d) char* class\n\n")
+            font.pixelSize: 20
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+        }
+
+        CheckBox {
+            id: checkBox
+            x: 33
+            y: 154
+            text: qsTr("")
+        }
+
+        CheckBox {
+            id: checkBox1
+            x: 33
+            y: 219
+            text: qsTr("")
+        }
+
+        CheckBox {
+            id: checkBox2
+            x: 33
+            y: 283
+            text: qsTr("")
+        }
+
+        CheckBox {
+            id: checkBox3
+            x: 33
+            y: 335
+            text: qsTr("")
+        }
+
+        Button {
+            y: 459
+            width: 165
+            height: 40
+            text: "Answer"
+            anchors.horizontalCenterOffset: -5
+            anchors.horizontalCenter: parent.horizontalCenter
+            onClicked: {
+                if (checkBox.checked && !checkBox1.checked && !checkBox2.checked && !checkBox3.checked) {
+                    console.log("Correct answer!");
+                    logicHandler.handleNavigation("Quest.qml", mainWindow);
+                } else {
+                    console.log("Wrong answer. Try again.");
+                }
+            }
         }
     }
 }

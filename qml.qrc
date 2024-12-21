@@ -39,6 +39,28 @@
         <file>userinfo.sql</file>
         <file>users.db</file>
         <file>users.sqbpro</file>
-        <file>quiz.qml</file>
+        <file>quizquestion1.qml</file>
+        <file>quizquestion2.qml</file>
+        <file>quizquestion3.qml</file>
+        <file>quizquestion4.qml</file>
+        <file>ClassesQuiz.qml</file>
+        <file>ClassesQuiz2.qml</file>
+        <file>ClassesQuiz3.qml</file>
+        <file>ClassesQuiz4.qml</file>
+        <file>ClassesQuiz5.qml</file>
+        <file>TrainingGround.qml</file>
+        <file>SideQuest.qml</file>
+        <file>sidequest1.qml</file>
+        <file>sidequest2.qml</file>
+        <file>sidequest3.qml</file>
+        <file>ErrorPopup.qml</file>
+        <file>DisplayScore.qml</file>
+        <file>sidequest4.qml</file>
+        <file>sidequest5.qml</file>
+        <file>sidequest6.qml</file>
+        <file>sidequest7.qml</file>
+        <file>sidequest8.qml</file>
+        <file>sidequest9.qml</file>
+        <file>ScoreManager.qml</file>
     </qresource>
 </RCC>

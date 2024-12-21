@@ -1,6 +1,5 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import GoalsModel 1.0 // Ensure GoalsModel is registered in C++
 import LogicHandler 1.0
 
 ApplicationWindow {
@@ -13,10 +12,6 @@ ApplicationWindow {
     LogicHandler {
         id: logicHandler // This allows referencing this instance in QML
     }
-    GoalsModel {
-        id: goalsModel
-    }
-
     Rectangle {
         width: 740
         height: 716
