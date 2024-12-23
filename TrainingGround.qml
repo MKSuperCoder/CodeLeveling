@@ -62,10 +62,10 @@ ApplicationWindow {
             }
 
             Button {
-                text: "Under Construction"
+                text: "Target Skills \n(Under Construction)"
                 width: 200
-                height: 50
-                font.pixelSize: 16
+                height: 80
+                font.pixelSize: 12
                 onClicked: console.log("Target Skills button clicked")
             }
         }

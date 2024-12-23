@@ -159,6 +159,7 @@ ApplicationWindow {
                 if (checkBox.checked && !checkBox1.checked && !checkBox2.checked && !checkBox3.checked) {
                     console.log("Correct answer!");
                     logicHandler.handleNavigation("Quest.qml", mainWindow);
+                    logicHandler.handleNavigation("Rewards.qml", mainWindow)
                 } else {
                     console.log("Wrong answer. Try again.");
                 }

@@ -173,6 +173,7 @@ ApplicationWindow {
                     console.log("Correct answer!");
                     scoreManager.incrementScore();
                     logicHandler.handleNavigation("DisplayScore.qml", mainWindow);
+                    logicHandler.handleNavigation("Rewards.qml", mainWindow)
                 } else {
                     errorPopup.open();
                     console.log("Wrong answer. Try again.");
